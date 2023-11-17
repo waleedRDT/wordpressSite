@@ -1,0 +1,50 @@
+.partners {
+    padding: 100px 0;
+
+    .inner {
+
+        .sec-heading {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+        
+            h2 {
+              @include sec-heading;
+              font-size: 36px;
+        
+              span {
+                color: $brand-primary;
+              }
+            }
+        }
+
+        .partner-logos {
+                margin-top: 30px;
+
+            .slick-track {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .partner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    display: inline-block;
+                    max-width: 150px;
+                    width: 100%;
+
+                    @include media-breakpoint-down(lg) {
+                        max-width: 125px;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

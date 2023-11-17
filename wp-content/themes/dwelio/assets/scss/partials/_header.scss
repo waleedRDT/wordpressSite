@@ -1,0 +1,209 @@
+header {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    transition: 0.3s all ease;
+    position: fixed;
+    background-color: rgba(#fff, 0.8);
+    backdrop-filter: blur(20px);
+    
+    @include media-breakpoint-up(lg) {
+        padding: 0;
+        // border-bottom: 5px solid $fill-grey-light;
+    }
+
+    &.fixed-header {
+        // background-color: #fff;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 0px 8px 0px rgba(#000, 0.15);
+
+        .inner {
+            padding: 25px 0 15px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 35px 0 25px;
+        transition: 0.3s all ease;
+    }
+
+    .logo {
+        max-width: 200px;
+        width: 100%;
+
+        a {
+            display: block;
+        }
+
+        img {
+            height: 25px;
+            width: 100%;
+            display: block;
+            object-fit: contain;
+
+            @include media-breakpoint-up(lg) {
+                height: 50px;
+            }
+        }
+    }
+
+    .navbar__wrap {
+        flex: 1;
+    }
+    
+    .menu {
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            & > li {
+                position: relative;
+                padding: 7px 0;
+                margin: 0 10px;
+    
+                & > a {
+                    padding: 0 6px;
+                    color: $body-color;
+                    font-weight: $fw-semi-bold;
+
+                    &:hover {
+                        color: $brand-primary;
+                    }
+        
+                    &:after {
+                        @include transition-standard;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0%;
+                        content: '.';
+                        color: transparent;
+                        background: $brand-secondary;
+                        height: 3px;
+                    }
+        
+                    &:hover {
+                        
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .current-menu-item {
+
+            a {
+                color: $brand-primary;
+            }
+
+            & > a {
+
+                &:hover {
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__cta {
+        max-width: 200px;
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include media-breakpoint-up(lg) {
+            display: flex
+        }
+
+        &--btn {
+            @include btn;
+        }
+    }
+
+    .searchbar {
+        margin-left: 16.5px;
+
+        .search__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            svg {
+                display: block;
+
+                path {
+                    @include transition-standard;
+                }
+            }
+
+            &:hover {
+
+                svg {
+                    
+                    path {
+                        fill: $brand-secondary;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchbar__mob {
+
+        .form__item {
+            max-width: 279px;
+            width: 100%;
+            position: relative;
+
+            input {
+                @include font-format(16px, 24px);
+                padding: 8px 39px 8px 21px;
+                border-radius: 10000px;
+                width: 100%;
+                height: auto;
+                background-color: $fill-grey-light;
+                border: none;
+                outline: none;
+                box-shadow: none;
+
+                &::placeholder {
+                    color: #404726;
+                }
+            }
+
+            .search__cta {
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }   
+    }
+}

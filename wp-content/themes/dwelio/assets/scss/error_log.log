@@ -1,0 +1,18 @@
+04/26/23 9:06:00: style.scss - Undefined mixin media-breakpoint-up: partials/_menu.scss on line 6, at column 5
+Call Stack:
+#0 import partials/_menu.scss style.scss on line 3
+04/26/23 9:51:07: style.scss - Undefined mixin global-font: partials/_global.scss on line 23, at column 5
+Call Stack:
+#0 import partials/_global.scss style.scss on line 1
+04/26/23 9:53:08: style.scss - Undefined mixin global-font: partials/_global.scss on line 23, at column 5
+Call Stack:
+#0 import partials/_global.scss style.scss on line 1
+04/27/23 12:56:05: style.scss - Only 1 argument allowed, but 2 were passed.: partials/_elements.scss on line 76, at column 5
+Call Stack:
+#0 import partials/_elements.scss style.scss on line 3
+04/27/23 12:56:10: style.scss - Only 1 argument allowed, but 2 were passed.: partials/_elements.scss on line 76, at column 5
+Call Stack:
+#0 import partials/_elements.scss style.scss on line 3
+09/21/23 8:39:29: style.scss - Undefined variable $fill-grey-dark: partials/home/_hero.scss on line 2, at column 5
+Call Stack:
+#0 import partials/home/_hero.scss style.scss on line 8
